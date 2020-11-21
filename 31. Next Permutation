@@ -1,0 +1,24 @@
+class Solution {
+public:
+    void nextPermutation(vector<int>& nums) {
+        vector<int>v;
+        for(int i=0; i<nums.size(); i++){
+            v.push_back(nums[i]);
+        }
+        bool val = next_permutation(nums.begin(),nums.end());
+        if(val== false){
+            cout<< "[";
+            for(int i=0; i<v.size(); i++){
+                cout<<v[i]<<",";
+            }
+            cout<<"]"<<endl;
+        }
+        else{
+            cout<< "[";
+            for(int i=0; i<nums.size(); i++){
+                cout<<nums[i]<< ",";
+            }
+            cout<< "]"<<endl;
+        }
+    }
+};
